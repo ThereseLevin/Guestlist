@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Guestlist</title>
+</head>
+<body>
+
+    <div class="col-left">
+        <form id="guest-form">
+
+            <p>First name:</p><br>
+            <input type="text" name="firstname" placeholder="Your first name"><br>
+
+            <p>Last name:</p><br>
+            <input type="text" name="lastname" placeholder="Your last name"><br>
+
+            <p>Age:</p><br>
+            <input type="number" name="age" placeholder="18"><br>
+
+            <p>Phone nr:</p><br>
+            <input type="phone" name="phone" placeholder="072 715 09 57"><br>
+
+            <p>Bringing:</p><br>
+            <input type="radio" name="bringing" value="food"> Food <br>
+            <input type="radio" name="bringing" value="drinks"> Drinks <br>
+            <input type="radio" name="bringing" value="other"> Other
+
+        </form>
+        <br>
+        <button id="submit-list" onclick="get_form_data()">JOIN</button>
+</div>
+
+<div class="col-right">
+    <table >
+        <thead>
+            <tr>
+                <td>First name</td>
+                <td>Last name</td>
+                <td>Age</td>
+                <td>Phone</td>
+                <td>Bringing</td>
+            </tr>
+        </thead>
+        <tbody id="guest-list">
+         
+        </tbody>
+    </table>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
