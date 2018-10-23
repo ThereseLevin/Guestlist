@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Guestlist</title>
+</head>
+<body>
+
+    <div class="col-left">
+        <form id="guest-form">
+
+            <p>First name:</p><br>
+            <input type="text" name="firstname" placeholder="Your first name"><br>
+
+            <p>Last name:</p><br>
+            <input type="text" name="lastname" placeholder="Your last name"><br>
+
+            <p>Age:</p><br>
+            <input type="number" name="age" placeholder="18"><br>
+
+            <p>Phone nr:</p><br>
+            <input type="tel" name="phone" placeholder="072 715 09 57">
+
+            <p>Bringing:</p><br>
+            <input type="radio" name="bringing" value="food"> Food <br>
+            <input type="radio" name="bringing" value="drinks"> Drinks <br>
+            <input type="radio" name="bringing" value="other"> Other
+
+            <br>
+            <p>Secret message</p>
+            <input type="password" name="psw" placeholder="Someting secret">
+
+            <p>I like:</p>
+            <input type="checkbox" name="check1" value="cats"> Cats <br>
+            <input type="checkbox" name="check2" value="dogs"> Dogs <br>
+            <input type="checkbox" name="check3" value="birds"> Birds
+            <br>
+
+            <br>
+            <p>My favorite color</p>
+            <input type="color" name="favcolor"> <br>
+
+            <br>
+            <p>Your birthday</p>
+            <input type="date" name="bday"><br>
+
+            <br>
+            <p>How do you feel today?</p>
+            Bad <input type="range" name="points" min="0" max="10"> Good
+
+            <br>
+            <input type="reset" value="Reset form">
+        </form>
+        <br>
+        <button id="submit-list" onclick="get_form_data()">Submit</button>
+        
+</div>
+
+<div class="col-right">
+    <table >
+        <thead>
+            <tr>
+                <td>First name</td>
+                <td>Last name</td>
+                <td>Age</td>
+                <td>Phone</td>
+                <td>Bringing</td>
+                <td>Secret</td>
+                <td>Likes</td>
+                <td>Fav color</td>
+                <td>My birthday</td>
+                <td>1-10 mood</td>
+            </tr>
+        </thead>
+        <tbody id="guest-list">
+         
+        </tbody>
+    </table>
+
+    <button id="submit-list" onclick="remove_all_guests()">Delete all</button>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
