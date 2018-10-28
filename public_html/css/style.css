@@ -1,5 +1,6 @@
 body {
     background-color: goldenrod;
+    width: 100%;
 }
 
 .col-left {
@@ -12,6 +13,7 @@ body {
     float: right;
 }
 
+
 td {
     border: 1px solid black;
     padding: 10px;
@@ -21,3 +23,9 @@ td {
 * {
     box-sizing: border-box;
 }
+
+p {
+    padding: 0;
+    margin: 3px;
+}
+

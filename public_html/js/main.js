@@ -1,5 +1,9 @@
 
+        // Delete one
+        var deleteOne = '<button id="submit-list" onclick="remove_one_guests()">X</button>';
 
+        
+        // Guestlist
         let guest_array = [];
 
         if(localStorage.getItem('stored_guest_list')){
@@ -26,8 +30,16 @@
             lname: guestForm.lastname.value,
             age: guestForm.age.value,
             phone: guestForm.phone.value,
-            bringing: guestForm.bringing.value
+            bringing: guestForm.bringing.value,
+            psw: guestForm.psw.value,
+            check1: guestForm.check1.value,
+            check2: guestForm.check2.value,
+            check3: guestForm.check3.value,
+            favcolor: guestForm.favcolor.value,
+            bday: guestForm.bday.value,
+            points: guestForm.points.value
         }
+
         
              // push guest obj into guest array
         guest_array.push(guest);
@@ -52,7 +64,13 @@
                 '<td>' + guest.lname + '</td>' +
                 '<td>' + guest.age + '</td>' +
                 '<td>' + guest.phone + '</td>' +
-                '<td>' + guest.bringing + '</td>';
+                '<td>' + guest.bringing + '</td>' +
+                '<td>' + guest.psw + '</td>' +
+                '<td>' + guest.check1 + ', ' + guest.check2 + ', ' + guest.check3 + '</td>' +
+                '<td>' + guest.favcolor + '</td>' +
+                '<td>' + guest.bday + '</td>' +
+                '<td>' + guest.points + '</td>' + 
+                '<td>' + deleteOne + '</td>';
 
                     // insert tabel row with content in tbody with id guest-list
                 document.getElementById('guest-list').appendChild(node);
@@ -60,10 +78,19 @@
             
         }
 
+
         function remove_all_guests() {
             localStorage.setItem('stored_guest_list', '');
             guest_array.length = 0;
             add_guests_to_list();
         }
+
+        function remove_one_guests() {
+            localStorage.setItem('stored_guest_list', '');
+            guest_array.length = 0;
+            add_guests_to_list();
+        }
+
+
 
 //Return avbryter hela functionen - stannar upp allt
