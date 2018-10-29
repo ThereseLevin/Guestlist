@@ -86,11 +86,15 @@
         }
 
         function delete_one_guest(index) {
+            document.getElementById(index).setAttribute('class','removed');
+            setTimeout(function(){
             guest_array.splice(index, 1);
-            //console.log(index);
             localStorage.setItem('stored_guest_list', JSON.stringify(guest_array));
             add_guests_to_list();
-        }
+        
+            }, 1000
+        );
+     }
 
 
 
