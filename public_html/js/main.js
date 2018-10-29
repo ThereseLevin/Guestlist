@@ -1,8 +1,4 @@
 
-        // Delete one
-        var deleteOne = '<button id="submit-list" onclick="remove_one_guests()">X</button>';
-
-        
         // Guestlist
         let guest_array = [];
 
@@ -53,10 +49,12 @@
 
             document.getElementById('guest-list').innerHTML = '';
 
-            guest_array.map(guest => {
+            guest_array.map((guest, index) => {
 
                     // create tabel row element
                 let node = document.createElement('TR');
+
+                node.setAttribute('id', index);
 
                     //add content to table row
                 node.innerHTML = 
@@ -70,7 +68,7 @@
                 '<td>' + guest.favcolor + '</td>' +
                 '<td>' + guest.bday + '</td>' +
                 '<td>' + guest.points + '</td>' + 
-                '<td>' + deleteOne + '</td>';
+                '<td><button onClick=delete_one_guest('+index+')> Delete <button> </td>';
 
                     // insert tabel row with content in tbody with id guest-list
                 document.getElementById('guest-list').appendChild(node);
@@ -85,9 +83,10 @@
             add_guests_to_list();
         }
 
-        function remove_one_guests() {
-            localStorage.setItem('stored_guest_list', '');
-            guest_array.length = 0;
+        function delete_one_guest(index) {
+            guest_array.splice(index, 1);
+            //console.log(index);
+            localStorage.setItem('stored_guest_list', JSON.stringify(guest_array));
             add_guests_to_list();
         }
 
