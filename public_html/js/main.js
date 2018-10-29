@@ -33,7 +33,8 @@
             check3: guestForm.check3.value,
             favcolor: guestForm.favcolor.value,
             bday: guestForm.bday.value,
-            points: guestForm.points.value
+            points: guestForm.points.value,
+            description: guestForm.description.value
         }
 
         
@@ -63,6 +64,7 @@
                 '<td>' + guest.age + '</td>' +
                 '<td>' + guest.phone + '</td>' +
                 '<td>' + guest.bringing + '</td>' +
+                '<td>' + ( guest.description !== undefined && guest.description !== '' ? guest.description : 'No desc...' )  + '</td>' +
                 '<td>' + guest.psw + '</td>' +
                 '<td>' + guest.check1 + ', ' + guest.check2 + ', ' + guest.check3 + '</td>' +
                 '<td>' + guest.favcolor + '</td>' +
