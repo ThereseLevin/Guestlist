@@ -29,3 +29,15 @@ p {
     margin: 3px;
 }
 
+.drinks {
+    background-color: salmon;
+}
+
+.other {
+    background-color: cadetblue;
+}
+
+.food {
+    background-color: cornflowerblue;
+}
+
